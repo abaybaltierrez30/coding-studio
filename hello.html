@@ -3,9 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>Hello Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
       :root {
-        --bg-dark: #111111;
+        --bg-dark: #0b0b12;
         --red-main: #ff2a2a;
       }
 
@@ -28,7 +31,7 @@
 
       .bg {
         position: absolute;
-        inset: 0;
+        inset: -10%;
         overflow: hidden;
         z-index: 0;
       }
@@ -36,14 +39,15 @@
       .orb {
         position: absolute;
         border-radius: 42% 58% 55% 45% / 46% 44% 56% 54%;
-        opacity: 0.8;
+        opacity: 0.88;
         box-shadow:
-          inset 0 0 40px rgba(255,255,255,0.28),
-          inset 0 -20px 35px rgba(255,255,255,0.12),
-          0 20px 45px rgba(0,0,0,0.18);
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-        border: 1px solid rgba(255, 255, 255, 0.18);
+          inset 0 0 45px rgba(255,255,255,0.38),
+          inset 0 -20px 40px rgba(255,255,255,0.12),
+          0 28px 55px rgba(0,0,0,0.24),
+          0 0 35px rgba(255,255,255,0.18);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255,255,255,0.22);
         animation: drift linear infinite alternate;
       }
 
@@ -52,7 +56,7 @@
           transform: translate(0, 0) scale(1) rotate(0deg);
         }
         100% {
-          transform: translate(var(--dx), var(--dy)) scale(1.18) rotate(12deg);
+          transform: translate(var(--dx), var(--dy)) scale(1.18) rotate(18deg);
         }
       }
 
@@ -73,7 +77,7 @@
       }
 
       p {
-        font-family: "Bauhaus 93", "Arial Black", sans-serif;
+        font-family: "Source Sans 3", "Source Sans", Arial, sans-serif;
         font-size: 1.2rem;
         margin: 0;
       }
@@ -81,12 +85,12 @@
   </head>
   <body>
     <div class="bg" aria-hidden="true">
-      <div class="orb" style="left: 6%; top: 8%; width: 240px; height: 240px; background: linear-gradient(135deg, rgba(255, 120, 120, 0.68), rgba(255, 80, 80, 0.22)); --dx: 160px; --dy: 180px; animation-duration: 20s; animation-delay: 0s;"></div>
-      <div class="orb" style="left: 18%; top: 62%; width: 210px; height: 210px; background: linear-gradient(135deg, rgba(116, 208, 255, 0.7), rgba(60, 120, 255, 0.2)); --dx: -150px; --dy: -180px; animation-duration: 23s; animation-delay: 1.2s;"></div>
-      <div class="orb" style="left: 38%; top: 12%; width: 310px; height: 310px; background: linear-gradient(135deg, rgba(137, 255, 168, 0.68), rgba(25, 186, 122, 0.18)); --dx: -200px; --dy: 170px; animation-duration: 28s; animation-delay: 2.1s;"></div>
-      <div class="orb" style="left: 58%; top: 54%; width: 270px; height: 270px; background: linear-gradient(135deg, rgba(255, 220, 120, 0.7), rgba(255, 160, 90, 0.18)); --dx: 170px; --dy: -200px; animation-duration: 24s; animation-delay: 0.8s;"></div>
-      <div class="orb" style="left: 73%; top: 16%; width: 240px; height: 240px; background: linear-gradient(135deg, rgba(210, 150, 255, 0.7), rgba(132, 86, 255, 0.22)); --dx: -180px; --dy: 180px; animation-duration: 25s; animation-delay: 2.8s;"></div>
-      <div class="orb" style="left: 82%; top: 68%; width: 290px; height: 290px; background: linear-gradient(135deg, rgba(255, 158, 220, 0.72), rgba(255, 94, 170, 0.18)); --dx: -220px; --dy: -160px; animation-duration: 30s; animation-delay: 1.5s;"></div>
+      <div class="orb" style="left: -8%; top: -12%; width: 760px; height: 760px; background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.9), rgba(255, 86, 86, 0.82) 25%, rgba(255, 30, 30, 0.35) 58%, rgba(255, 0, 102, 0.12) 100%); --dx: 220px; --dy: 200px; animation-duration: 24s; animation-delay: 0s;"></div>
+      <div class="orb" style="left: 16%; top: 58%; width: 700px; height: 700px; background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.95), rgba(94, 255, 251, 0.82) 22%, rgba(0, 212, 255, 0.38) 60%, rgba(36, 87, 255, 0.12) 100%); --dx: -170px; --dy: -220px; animation-duration: 28s; animation-delay: 1.2s;"></div>
+      <div class="orb" style="left: 38%; top: -18%; width: 820px; height: 820px; background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.92), rgba(151, 255, 110, 0.8) 22%, rgba(48, 255, 136, 0.36) 58%, rgba(0, 194, 120, 0.12) 100%); --dx: -240px; --dy: 210px; animation-duration: 32s; animation-delay: 2.1s;"></div>
+      <div class="orb" style="left: 54%; top: 48%; width: 760px; height: 760px; background: radial-gradient(circle at 40% 35%, rgba(255,255,255,0.95), rgba(255, 222, 85, 0.82) 24%, rgba(255, 160, 0, 0.38) 60%, rgba(255, 98, 0, 0.12) 100%); --dx: 200px; --dy: -240px; animation-duration: 26s; animation-delay: 0.8s;"></div>
+      <div class="orb" style="left: 70%; top: -8%; width: 720px; height: 720px; background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.9), rgba(220, 150, 255, 0.8) 22%, rgba(175, 92, 255, 0.35) 60%, rgba(100, 0, 255, 0.12) 100%); --dx: -210px; --dy: 200px; animation-duration: 30s; animation-delay: 2.8s;"></div>
+      <div class="orb" style="left: 82%; top: 58%; width: 840px; height: 840px; background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.92), rgba(255, 135, 223, 0.82) 24%, rgba(255, 44, 191, 0.36) 58%, rgba(255, 0, 123, 0.12) 100%); --dx: -250px; --dy: -200px; animation-duration: 34s; animation-delay: 1.5s;"></div>
     </div>
 
     <div class="content">
